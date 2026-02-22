@@ -102,12 +102,40 @@ function updateDivLeftMargin() {
   }
 }
 
+// ----- scroll-reveal.js -----
+function setupScrollReveal() {
+  const images = document.querySelectorAll('.duotone-img');
+  
+  const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal');
+      } else {
+        entry.target.classList.remove('reveal');
+      }
+    });
+  };
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5 // Trigger when 50% of the image is visible
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  images.forEach(img => {
+    observer.observe(img);
+  });
+}
+
 // ----- Init on DOMContentLoaded -----
 document.addEventListener("DOMContentLoaded", function () {
   typewriter();
   typewriterLanding();
   setupPopups();
   updateDivLeftMargin();
+  setupScrollReveal();
 });
 
 window.addEventListener("resize", updateDivLeftMargin);

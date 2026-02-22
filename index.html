@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>J.Wanyu</title>
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/src/style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise"
@@ -18,32 +21,28 @@
   <body>
     <!-- content -->
 
-    <div class="container">
-      <h1 id="hello-header">Hello, I'm</h1>
-      
-      <div class="logo">
-        <b>W<span>a</span>n<span>Y</span>u©</b>
-        <h2 id="typedtext-landing">This is what I do......</h2>
+    <div class="vertical-sidebar left-sidebar">TOKYO BASED</div>
+    <div class="vertical-sidebar right-sidebar">WEB DEVELOPER</div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">WAN<br/>YU</h1>
+        <h2 class="hero-subtitle">CREATIVE DEVELOPER</h2>
       </div>
 
-      <div class="center-circles">
-        <a class="guide-circle" href="#about-me">About Me</a>
-        <a class="guide-circle" href="#skills">Skills</a>
-        <img
-          class="img-circle"
-          src="https://avatars.githubusercontent.com/u/120252634?v=4"
-          alt="Profile image"
-        />
-        <a class="guide-circle" href="#projects">Projects</a>
-        <a class="guide-circle" href="#contact">Contact</a>
-      </div>
+      <nav class="editorial-nav">
+        <a href="#about-me">01. ABOUT</a>
+        <a href="#skills">02. SKILLS</a>
+        <a href="#projects">03. WORK</a>
+        <a href="#contact">04. CONTACT</a>
+      </nav>
+    </div>
 
       <!-- About me 𓆑-->
-      <div>
-        <h1 id="about-me" class="skill-title right">About
-          me.</h1>
-        <div class="about-me-div">
-          <h2 id="typedtext">WEB DEVELOPER.</h2>
+      <div class="collage-section offset-right">
+        <h1 id="about-me" class="section-title vertical-text">ABOUT ME.</h1>
+        <div class="about-me-div retro-box">
+          <h2 class="sub-heading">WEB DEVELOPER.</h2>
           <p
             class="about-me-content"
             data-aos="fade-right"
@@ -55,15 +54,15 @@
             Thanks for stopping by my page!
           </p>
         </div>
-        <div>
-          <img src="images/Theme-img/Background-me.svg" alt="ellipse1">
-          <img src="images/Theme-img/Me-cold.png" alt="My photo" id="me-img">
+        <div class="image-collage z-top displace-down">
+          <div class="geometric-shape circle-shape bg-primary"></div>
+          <img src="images/Theme-img/Me-cold.webp" alt="My photo" class="duotone-img cutout">
         </div>
       </div>
 
       <!-- Skills -->
-      <div>
-        <h1 id="skills" class="skill-title left-2">Programming Languages.</h1>
+      <div class="skills-wrapper">
+        <h1 id="skills" class="skill-title left-2">LANGUAGES.</h1>
 
         <div class="skills">
 
@@ -213,88 +212,83 @@
 
         </div>
 
-        <div class="img-align-left">
-          <img src="images/Theme-img/Background-skill.svg" alt="llipse2">
-          <img src="images/Theme-img/skill-cold.png" alt="" id="skill-img">
+        <div class="img-align-left relative-collage displace-up">
+          <div class="geometric-shape semi-circle bg-yellow"></div>
+          <img src="images/Theme-img/skill-cold.webp" alt="" class="duotone-img cutout z-top" loading="lazy">
         </div>
+      </div>
+      
+      <div>
+        <img src="images/Theme-img/3 dots.svg" alt="3 dots" id="three-dots" loading="lazy">
+        <img src="images/Theme-img/background-projeck-1.svg" alt="ellipse1" loading="lazy">
+        <img src="images/Theme-img/project1.webp" alt="Donguri photo" id="project-bin-img" loading="lazy">
       </div>
 
       <!-- Projects -->
-      <div>
-        <h1 class="skill-title right-2" id="projects">Projects.</h1>
-
-        <div class="binfind-img">
-          <div class="project-layer  project">
-            <button class="btn-53 trigger" data-popup="binfind">
-              <div class="original">View More</div>
-              <div class="letters">
-                  <!-- Place each letter in its own element -->
-                  <span>V</span>
-                  <span>I</span>
-                  <span>E</span>
-                  <span>W</span>
-                  &nbsp;
-                  <span>M</span>
-                  <span>O</span>
-                  <span>R</span>
-                  <span>E</span>
-                </div></a
-              >
-            </button>
-          </div>
-        </div>
-
-        <div>
-          <img src="images/Theme-img/3 dots.svg" alt="3 dots" id="three-dots">
-          <img src="images/Theme-img/background-projeck-1.svg" alt="ellipse1">
-          <img src="images/Theme-img/project1.png" alt="Donguri photo" id="project-bin-img">
-        </div>
-          
-        <div class="city2table-img">
-          <div class="project-layer  project">
-            <button class="btn-53 trigger" data-popup="city2table">
-              <div class="original">View More</div>
-              <div class="letters">
-                  <!-- Place each letter in its own element -->
-                  <span>V</span>
-                  <span>I</span>
-                  <span>E</span>
-                  <span>W</span>
-                  &nbsp;
-                  <span>M</span>
-                  <span>O</span>
-                  <span>R</span>
-                  <span>E</span>
-                </div>
-            </button>
-          </div>
-        </div>
-
-        <div class="img-align-left">
-          <img src="images/Theme-img/background4.svg" alt="llipse2">
-          <img src="images/Theme-img/peek.png" alt="Onigiri-peek" id="peek-img">
-          <img src="images/Theme-img/Vertical bar.svg" alt="Vertical bar" id="vertical-bar">
-        </div>
+      <div class="projects-carousel-section">
+        <h1 class="section-title text-center" id="projects">SELECTED WORKS.</h1>
         
-        <div class="woof-img">
-          <div class="project-layer  project">
-            <button class="btn-53 trigger" data-popup="woof">
-              <div class="original">View More</div>
-              <div class="letters">
-                  <!-- Place each letter in its own element -->
-                  <span>V</span>
-                  <span>I</span>
-                  <span>E</span>
-                  <span>W</span>
-                  &nbsp;
-                  <span>M</span>
-                  <span>O</span>
-                  <span>R</span>
-                  <span>E</span>
+        <div class="carousel-container">
+          
+          <!-- Project 1 -->
+          <div class="carousel-card-new">
+            <div class="card-outline"></div>
+            <div class="card-image-bg binfind-bg"></div>
+            <div class="card-content-box">
+              <h2 class="card-title-new">BINFIND</h2>
+              <p>An innovative app that helps you locate the nearest trash bins in Tokyo.</p>
+              <button class="btn-53 trigger" data-popup="binfind">
+                <div class="original">View More</div>
+                <div class="letters">
+                  <span>V</span><span>I</span><span>E</span><span>W</span>&nbsp;
+                  <span>M</span><span>O</span><span>R</span><span>E</span>
                 </div>
-            </button>
+              </button>
+            </div>
           </div>
+          
+          <!-- Project 2 -->
+          <div class="carousel-card-new">
+            <div class="card-outline"></div>
+            <div class="card-image-bg city2table-bg"></div>
+            <div class="card-content-box">
+              <h2 class="card-title-new">CITY2TABLE</h2>
+              <p>Connects food lovers with local chefs for in-home cooking experiences.</p>
+              <button class="btn-53 trigger" data-popup="city2table">
+                <div class="original">View More</div>
+                <div class="letters">
+                  <span>V</span><span>I</span><span>E</span><span>W</span>&nbsp;
+                  <span>M</span><span>O</span><span>R</span><span>E</span>
+                </div>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Project 3 -->
+          <div class="carousel-card-new">
+            <div class="card-outline"></div>
+            <div class="card-image-bg woof-bg"></div>
+            <div class="card-content-box">
+              <h2 class="card-title-new">WOOF UI/UX</h2>
+              <p>Pet-friendly hotel booking app designed to offer pet owners a better option.</p>
+              <button class="btn-53 trigger" data-popup="woof">
+                <div class="original">View More</div>
+                <div class="letters">
+                  <span>V</span><span>I</span><span>E</span><span>W</span>&nbsp;
+                  <span>M</span><span>O</span><span>R</span><span>E</span>
+                </div>
+              </button>
+            </div>
+          </div>
+          
         </div>
+      </div>
+      
+      <div class="img-align-left">
+        <img src="images/Theme-img/background4.svg" alt="llipse2" loading="lazy">
+        <img src="images/Theme-img/peek.webp" alt="Onigiri-peek" id="peek-img" loading="lazy">
+        <img src="images/Theme-img/Vertical bar.svg" alt="Vertical bar" id="vertical-bar" loading="lazy">
+      </div>
           
         <div class="popup" id="binfind">
           <h2>Binfind</h2>
@@ -349,29 +343,30 @@
 
     </div>
     
-    <!-- Footer --> <!-- Contact -->
-    <div class="card-social-icons">
-      <h1 class="skill-title left" id="contact">Contact.</h1>
-      <ul class="list-inline">
-        <li class="icon-footer">
-          <a href="https://github.com/wanyu0413" target="wanyu0413_github">
-            <i class="fa-brands fa-square-github"></i
-          ></a>
-        </li>
-        <li class="icon-footer">
-          <a href="https://www.linkedin.com/in/wanyu-jiang/" target="linkedin"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-        </li>
-        <li class="icon-footer">
-          <a
-            href="https://www.behance.net/gallery/152791383/Pet-friendly-hotel-booking-app-UXUI-case-study"
-            target="linkedin"
-            ><i class="fa-brands fa-square-behance"></i
-          ></a>
-        </li>
-      </ul>
-    </div>
+    <!-- Footer Contact -->
+    <footer class="site-footer">
+      <div class="footer-content retro-box">
+        <h1 class="section-title" id="contact">LET'S CONNECT.</h1>
+        <p class="about-me-content">Get in touch or check out my work on these platforms.</p>
+        <ul class="list-inline social-links">
+          <li class="icon-footer">
+            <a href="https://github.com/wanyu0413" target="wanyu0413_github" aria-label="GitHub">
+              <i class="fa-brands fa-square-github"></i>
+            </a>
+          </li>
+          <li class="icon-footer">
+            <a href="https://www.linkedin.com/in/wanyu-jiang/" target="linkedin" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="icon-footer">
+            <a href="https://www.behance.net/gallery/152791383/Pet-friendly-hotel-booking-app-UXUI-case-study" target="behance" aria-label="Behance">
+              <i class="fa-brands fa-square-behance"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
 
     <script>
       window.addEventListener('DOMContentLoaded', function () {
