@@ -147,7 +147,7 @@ h1, h2, h3, h4, .hero-title, .hero-subtitle, .editorial-nav a, .vertical-sidebar
   position: sticky;
   top: 40vh;
   float: left;
-  left: 30px; /* Bring in slightly */
+  left: 20px;
   z-index: 100;
   transform: rotate(180deg);
 }
@@ -156,7 +156,7 @@ h1, h2, h3, h4, .hero-title, .hero-subtitle, .editorial-nav a, .vertical-sidebar
   position: sticky;
   top: 40vh;
   float: right;
-  right: 30px; /* Bring in slightly */
+  right: 20px;
   z-index: 100;
 }
 
@@ -344,6 +344,10 @@ h1, h2, h3, h4, .hero-title, .hero-subtitle, .editorial-nav a, .vertical-sidebar
 
 .displace-up {
   margin-top: -100px;
+}
+
+.displace-up img {
+  margin-left: -10px;
 }
 
 /* Geometric Decals */
