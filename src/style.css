@@ -66,7 +66,7 @@ div:has(> #project-bin-img) {
     transform-origin: top;
   }
   100% {
-    transform: scaleY(1) translateY(30%);
+    transform: scaleY(1) translateY(50%);
     transform-origin: top;
   }
 }
@@ -100,16 +100,8 @@ body {
 
 .skills-wrapper {
   position: relative;
-  margin-top: 220px;
   width: 100%;
-}
-
-.left-2 {
-  position: absolute;
-  text-align: left;
-  left: -71px;
-  top: -34px;
-  transform: rotate(90deg);
+  margin-top: 30vh;
 }
 
 body {
@@ -138,10 +130,20 @@ h1, h2, h3, h4, .hero-title, .hero-subtitle, .editorial-nav a, .vertical-sidebar
   font-weight: normal;
   text-transform: uppercase;
 }
-
+@keyframes vertical-sidebar {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .vertical-sidebar {
-  position: sticky;
-  top: 40vh; /* Adjust sticky position */
+  position: fixed;
+  top: 40vh;
   height: fit-content;
   writing-mode: vertical-rl;
   font-size: 24px;
@@ -150,23 +152,25 @@ h1, h2, h3, h4, .hero-title, .hero-subtitle, .editorial-nav a, .vertical-sidebar
   z-index: 10;
   opacity: 0.8;
   transition: opacity 0.5s;
+  animation: vertical-sidebar 10s ease-in forwards;
 }
 
 .left-sidebar {
-  position: sticky;
+  position: fixed;
   top: 40vh;
   float: left;
   left: 20px;
   z-index: 100;
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateY(-100%);
 }
 
 .right-sidebar {
-  position: sticky;
-  top: 40vh;
+  position: fixed;
+  top: 35vh;
   float: right;
   right: 20px;
   z-index: 100;
+  transform: translateY(100%);
 }
 
 #woof-case-study {
@@ -309,13 +313,6 @@ h1, h2, h3, h4, .hero-title, .hero-subtitle, .editorial-nav a, .vertical-sidebar
   max-width: 500px;
 }
 
-.image-collage {
-  position: absolute;
-  left: 10vw;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .relative-collage {
   position: relative;
   display: inline-block;
@@ -346,8 +343,8 @@ h1, h2, h3, h4, .hero-title, .hero-subtitle, .editorial-nav a, .vertical-sidebar
 }
 
 .displace-down {
-  top: 100% !important; /* Move halfway down into next section */
-  transform: translateY(44%);
+  transform: translateY(50%);
+  left: 10vw;
 }
 
 .displace-up {
@@ -387,14 +384,15 @@ h1, h2, h3, h4, .hero-title, .hero-subtitle, .editorial-nav a, .vertical-sidebar
 
 /* skills section */
 .skills {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
   gap: 40px;
   background-color: var(--base);
   border-top: 4px solid var(--primary);
   border-bottom: 4px solid var(--primary);
-  margin: 10vh -6%;
+  margin: 0 auto;
   padding: 80px 10%;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .skills-category {
@@ -438,17 +436,17 @@ h1, h2, h3, h4, .hero-title, .hero-subtitle, .editorial-nav a, .vertical-sidebar
 }
 
 .skill-title {
-  letter-spacing: 0.1em;
+  font-size: clamp(60px, 8vw, 120px);
   font-weight: 400;
-  font-size: 62px;
+  letter-spacing: 0.1em;
   line-height: 1em;
-  margin: 0;
   color: var(--secondary);
   text-transform: uppercase;
-  transform: rotate(0deg);
+  position: absolute;
+  top: 0;
   left: 40px;
-  font-size: clamp(60px, 8vw, 120px);
-  transform: translateY(-50%);
+  transform: translateY(-80%);
+  margin: 0;
 }
 
 /* button_in_cards */
@@ -1025,9 +1023,6 @@ h1, h2, h3, h4, .hero-title, .hero-subtitle, .editorial-nav a, .vertical-sidebar
 
   .skill-title {
     opacity: .8;
-  }
-
-  .left-2 {
     left: 0;
     top: 0;
     transform: translateY(-75%);
