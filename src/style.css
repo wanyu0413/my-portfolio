@@ -41,7 +41,7 @@ div:has(> #skill-img) {
 }
 div:has(> #project-bin-img) {
   position: absolute;
-  right:calc(var(--container-left-margin) * -1);
+  right:0;
   top: 430px;
 }
 #three-dots {
@@ -56,8 +56,19 @@ div:has(> #project-bin-img) {
   position: absolute;
   height: 210px;
   width: auto;
-  right: 2px;
+  right: 0;
   bottom: 122px;
+}
+
+@keyframes vertical-bar {
+  10% {
+    transform: scaleY(0) translateY(0);
+    transform-origin: top;
+  }
+  100% {
+    transform: scaleY(1) translateY(30%);
+    transform-origin: top;
+  }
 }
 #vertical-bar {
   position: absolute;
@@ -66,6 +77,7 @@ div:has(> #project-bin-img) {
   left: 200%;
   top: 100%;
   z-index: -1;
+  animation: vertical-bar 2s ease-in forwards;
 }
 div:has(> #peek-img) {
   position: absolute;
@@ -76,11 +88,8 @@ div:has(> #peek-img) {
   position: absolute;
   height: 210px;
   width: auto;
-  left: 37px;
+  left: 35px;
   top: 30px;
-}
-.img-align-left {
-  left: calc(var(--container-left-margin) * -1);
 }
 
 html,
@@ -314,17 +323,16 @@ h1, h2, h3, h4, .hero-title, .hero-subtitle, .editorial-nav a, .vertical-sidebar
 
 /* Image Treatment */
 .duotone-img {
-  filter: sepia(40%) hue-rotate(170deg) saturate(150%) contrast(1.1) brightness(0.9);
+  filter: sepia(80%) brightness(0.8);
   mix-blend-mode: normal;
   transition: filter 1s ease, mix-blend-mode 1s ease, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
-  z-index: 1; /* Starts behind the geometric shape */
   transform: scale(0.95);
+  z-index: 10;
 }
 
 .duotone-img.reveal {
-  filter: sepia(0%) hue-rotate(0deg) saturate(100%) contrast(1) brightness(1);
-  z-index: 3; /* Pops out over the shape */
+  filter: sepia(0%) brightness(1);
 }
 
 .cutout {
@@ -396,7 +404,7 @@ h1, h2, h3, h4, .hero-title, .hero-subtitle, .editorial-nav a, .vertical-sidebar
   top: 0;
   left: -4px;
   color: var(--yellow);
-  text-shadow: -2px 4px 2.5px rgba(var(--rgb-base), 0.5);
+  text-shadow: 2px 4px 2.5px rgba(var(--rgb-base), 0.5);
 }
 
 .skills li:has(> .skill-item) {
@@ -983,7 +991,8 @@ h1, h2, h3, h4, .hero-title, .hero-subtitle, .editorial-nav a, .vertical-sidebar
   }
 
   .vertical-text {
-    display: none;
+    writing-mode: lr;
+    transform: rotate(0);
   }
 
   .about-me-div {
@@ -999,13 +1008,19 @@ h1, h2, h3, h4, .hero-title, .hero-subtitle, .editorial-nav a, .vertical-sidebar
   } 
 
   .displace-down {
-    transform: scale(0.6) !important;
+    transform: scale(0.6);
     transform-origin: right top;
-    position: relative !important;
-    left: 0 !important;
-    top: 0 !important;
+    position: relative;
+    left: 0;
+    top: 0;
     margin-bottom: 30px;
     text-align: center;
+  }
+
+  .displace-up {
+    transform: scale(0.6);
+    transform-origin: left top;
+    margin-top: -50px;
   }
 
   .skill-title {
@@ -1013,15 +1028,14 @@ h1, h2, h3, h4, .hero-title, .hero-subtitle, .editorial-nav a, .vertical-sidebar
   }
 
   .left-2 {
-    transform: rotate(90deg);
-    left: unset;
-    top: 430px;
-    right: -292px;
-    text-align: end;
+    left: 0;
+    top: 0;
+    transform: translateY(-75%);
   }
 
   .skills-wrapper {
     margin: 0;
+    margin-bottom: -40vh;
   }
 
   .skills {
@@ -1030,11 +1044,12 @@ h1, h2, h3, h4, .hero-title, .hero-subtitle, .editorial-nav a, .vertical-sidebar
     gap: 70px;
     padding-bottom: 35px;
     width: 100%;
-    margin-top: 0;
+    margin: 0;
+    box-sizing: border-box;
   }
 
-  .dog-image-container-left, 
-  .img-align-left, 
+  .dog-image-container-left,
+  div:has(> #peek-img),
   img:has(+#project-bin-img), 
   #project-bin-img {
     display: none;
@@ -1112,6 +1127,7 @@ h1, h2, h3, h4, .hero-title, .hero-subtitle, .editorial-nav a, .vertical-sidebar
   }
 
   .site-footer {
-    padding-bottom: 20px;
+    padding-block-start: 20px;
+    padding-block-end: 20px;
   }
 }

@@ -1,36 +1,3 @@
-// ----- typed-text-landing.js -----
-let aTextLanding = ["This is what I do......"];
-let iSpeedLanding = 350;
-let iIndexLanding = 0;
-let iArrLengthL = aTextLanding[0].length;
-let iScrollAtL = 20;
-let iTextPosL = 0;
-let sContentsL = '';
-let iRowL;
-
-function typewriterLanding() {
-  sContentsL = ' ';
-  iRowL = Math.max(0, iIndexLanding - iScrollAtL);
-  let destination = document.getElementById("typedtext-landing");
-
-  while (iRowL < iIndexLanding) {
-    sContentsL += aTextLanding[iRowL++] + '<br />';
-  }
-  if (destination) {
-    destination.innerHTML = sContentsL + aTextLanding[iIndexLanding].substring(0, iTextPosL) + "_";
-  }
-  if (iTextPosL++ == iArrLengthL) {
-    iTextPosL = 0;
-    iIndexLanding++;
-    if (iIndexLanding != aTextLanding.length) {
-      iArrLengthL = aTextLanding[iIndexLanding].length;
-      setTimeout(typewriterLanding, 500);
-    }
-  } else {
-    setTimeout(typewriterLanding, iSpeedLanding);
-  }
-}
-
 // ----- typed-text.js -----
 let aText = ["WEB DEVELOPER."];
 let iSpeed = 350;
@@ -132,7 +99,6 @@ function setupScrollReveal() {
 // ----- Init on DOMContentLoaded -----
 document.addEventListener("DOMContentLoaded", function () {
   typewriter();
-  typewriterLanding();
   setupPopups();
   updateDivLeftMargin();
   setupScrollReveal();
