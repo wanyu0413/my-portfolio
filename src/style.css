@@ -66,18 +66,6 @@ div:has(> #project-bin-img) {
   bottom: 122px;
 }
 
-@keyframes vertical-bar {
-  10% {
-    transform: scaleY(0) translateY(0);
-    transform-origin: top;
-  }
-
-  100% {
-    transform: scaleY(1) translateY(50%);
-    transform-origin: top;
-  }
-}
-
 #vertical-bar {
   position: absolute;
   height: 240px;
@@ -86,6 +74,17 @@ div:has(> #project-bin-img) {
   top: 100%;
   z-index: -1;
   animation: vertical-bar 2s ease-in forwards;
+  animation-timeline: view(10% 5%);
+}
+
+@keyframes vertical-bar {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(50%);
+  }
 }
 
 div:has(> #peek-img) {
@@ -148,20 +147,6 @@ h4,
   text-transform: uppercase;
 }
 
-@keyframes vertical-sidebar {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
 .vertical-sidebar {
   position: fixed;
   top: 40vh;
@@ -173,12 +158,24 @@ h4,
   z-index: 10;
   opacity: 0.8;
   transition: opacity 0.5s;
-  animation: vertical-sidebar 10s ease-in forwards;
+  animation: vertical-sidebar 1s linear both;
+  animation-timeline: scroll(root);
+  animation-range: 30% 40%;
+}
+
+@keyframes vertical-sidebar {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .left-sidebar {
   position: fixed;
-  top: 40vh;
+  top: 26vh;
   float: left;
   left: 20px;
   z-index: 100;
@@ -187,7 +184,7 @@ h4,
 
 .right-sidebar {
   position: fixed;
-  top: 35vh;
+  top: 20vh;
   float: right;
   right: 20px;
   z-index: 100;
