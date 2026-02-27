@@ -527,7 +527,7 @@ h4,
 
 .btn-53 {
   font-size: 13px;
-  margin: 16px 6px;
+  margin: 0;
   border: 5px solid var(--secondary);
   border-radius: 50px;
   box-sizing: border-box;
@@ -536,6 +536,8 @@ h4,
   overflow: hidden;
   position: relative;
   text-transform: uppercase;
+  width: fit-content;
+  align-self: end;
 }
 
 .btn-53:hover {
@@ -700,6 +702,26 @@ h4,
   z-index: 2;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card-title-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.language-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.language-icon {
+  width: 30px;
+  height: 30px;
 }
 
 .card-title-new {
@@ -708,14 +730,14 @@ h4,
   font-size: 50px;
   letter-spacing: 0.15em;
   line-height: 1;
-  margin: 0 0 15px 0;
+  margin: 0;
 }
 
 .card-content-box p {
   color: var(--cream);
   font-size: 16px;
   letter-spacing: 0.1em;
-  margin-bottom: 30px;
+  margin: 0;
 }
 
 /* Pop up */
