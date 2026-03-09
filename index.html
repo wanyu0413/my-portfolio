@@ -6,12 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>J.Wanyu</title>
   <link rel="icon" href="data:,">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload critical resources -->
+  <link rel="preload" href="/src/style.css" as="style">
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@100;400&display=swap"
+    as="style">
+
   <link rel="stylesheet" href="/src/style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <script src="https://kit.fontawesome.com/7e70e54d71.js" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@100;400&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet"
+    type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Vibur&display=swap" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'" />
+
+  <script src="https://kit.fontawesome.com/7e70e54d71.js" crossorigin="anonymous" async></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
   <script type="module" src="/src/main.js"></script>
 </head>
@@ -61,7 +75,7 @@
     </div>
     <div class="image-collage z-top displace-down">
       <div class="geometric-shape circle-shape bg-primary"></div>
-      <img src="images/Theme-img/Me-cold.webp" alt="My photo" class="duotone-img cutout">
+      <img src="images/Theme-img/Me-cold.webp" alt="My photo" class="duotone-img cutout" fetchpriority="high">
     </div>
   </div>
 

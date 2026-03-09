@@ -1,5 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Vibur);
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@100;400&display=swap");
+@charset "UTF-8";
 
 :root {
   --base: #211f20;
@@ -491,6 +490,7 @@ h4,
 .btn-53 {
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
+  appearance: button;
   background-color: var(--secondary);
   background-image: none;
   color: var(--secondary);
@@ -502,6 +502,7 @@ h4,
   line-height: 1.5;
   margin: 0;
   -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  mask-image: radial-gradient(#000, #fff);
   padding: 0;
 }
 
@@ -519,7 +520,6 @@ h4,
 
 .btn-53 svg {
   display: block;
-  vertical-align: middle;
 }
 
 .btn-53 [hidden] {
